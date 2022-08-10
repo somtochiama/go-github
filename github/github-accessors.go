@@ -10406,14 +10406,6 @@ func (p *PackageVersion) GetManifest() string {
 	return *p.Manifest
 }
 
-// GetMetadata returns the Metadata field.
-func (p *PackageVersion) GetMetadata() *PackageMetadata {
-	if p == nil {
-		return nil
-	}
-	return p.Metadata
-}
-
 // GetName returns the Name field if it's non-nil, zero value otherwise.
 func (p *PackageVersion) GetName() string {
 	if p == nil || p.Name == nil {

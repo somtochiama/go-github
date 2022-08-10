@@ -28,28 +28,28 @@ func (p Package) String() string {
 
 // PackageVersion represents a GitHub package version.
 type PackageVersion struct {
-	ID                  *int64           `json:"id,omitempty"`
-	Version             *string          `json:"version,omitempty"`
-	Summary             *string          `json:"summary,omitempty"`
-	Body                *string          `json:"body,omitempty"`
-	BodyHTML            *string          `json:"body_html,omitempty"`
-	Release             *PackageRelease  `json:"release,omitempty"`
-	Manifest            *string          `json:"manifest,omitempty"`
-	HTMLURL             *string          `json:"html_url,omitempty"`
-	TagName             *string          `json:"tag_name,omitempty"`
-	TargetCommitish     *string          `json:"target_commitish,omitempty"`
-	TargetOID           *string          `json:"target_oid,omitempty"`
-	Draft               *bool            `json:"draft,omitempty"`
-	Prerelease          *bool            `json:"prerelease,omitempty"`
-	CreatedAt           *Timestamp       `json:"created_at,omitempty"`
-	UpdatedAt           *Timestamp       `json:"updated_at,omitempty"`
-	PackageFiles        []*PackageFile   `json:"package_files,omitempty"`
-	Author              *User            `json:"author,omitempty"`
-	InstallationCommand *string          `json:"installation_command,omitempty"`
-	Metadata            *PackageMetadata `json:"metadata,omitempty"`
-	PackageHTMLURL      *string          `json:"package_html_url,omitempty"`
-	Name                *string          `json:"name,omitempty"`
-	URL                 *string          `json:"url,omitempty"`
+	ID                  *int64             `json:"id,omitempty"`
+	Version             *string            `json:"version,omitempty"`
+	Summary             *string            `json:"summary,omitempty"`
+	Body                *string            `json:"body,omitempty"`
+	BodyHTML            *string            `json:"body_html,omitempty"`
+	Release             *PackageRelease    `json:"release,omitempty"`
+	Manifest            *string            `json:"manifest,omitempty"`
+	HTMLURL             *string            `json:"html_url,omitempty"`
+	TagName             *string            `json:"tag_name,omitempty"`
+	TargetCommitish     *string            `json:"target_commitish,omitempty"`
+	TargetOID           *string            `json:"target_oid,omitempty"`
+	Draft               *bool              `json:"draft,omitempty"`
+	Prerelease          *bool              `json:"prerelease,omitempty"`
+	CreatedAt           *Timestamp         `json:"created_at,omitempty"`
+	UpdatedAt           *Timestamp         `json:"updated_at,omitempty"`
+	PackageFiles        []*PackageFile     `json:"package_files,omitempty"`
+	Author              *User              `json:"author,omitempty"`
+	InstallationCommand *string            `json:"installation_command,omitempty"`
+	Metadata            []*PackageMetadata `json:"metadata,omitempty"`
+	PackageHTMLURL      *string            `json:"package_html_url,omitempty"`
+	Name                *string            `json:"name,omitempty"`
+	URL                 *string            `json:"url,omitempty"`
 }
 
 func (pv PackageVersion) String() string {

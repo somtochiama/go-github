@@ -12192,13 +12192,6 @@ func TestPackageVersion_GetManifest(tt *testing.T) {
 	p.GetManifest()
 }
 
-func TestPackageVersion_GetMetadata(tt *testing.T) {
-	p := &PackageVersion{}
-	p.GetMetadata()
-	p = nil
-	p.GetMetadata()
-}
-
 func TestPackageVersion_GetName(tt *testing.T) {
 	var zeroValue string
 	p := &PackageVersion{Name: &zeroValue}

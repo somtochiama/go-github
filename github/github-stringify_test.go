@@ -1128,12 +1128,11 @@ func TestPackageVersion_String(t *testing.T) {
 		UpdatedAt:           &Timestamp{},
 		Author:              &User{},
 		InstallationCommand: String(""),
-		Metadata:            &PackageMetadata{},
 		PackageHTMLURL:      String(""),
 		Name:                String(""),
 		URL:                 String(""),
 	}
-	want := `github.PackageVersion{ID:0, Version:"", Summary:"", Body:"", BodyHTML:"", Release:github.PackageRelease{}, Manifest:"", HTMLURL:"", TagName:"", TargetCommitish:"", TargetOID:"", Draft:false, Prerelease:false, CreatedAt:github.Timestamp{0001-01-01 00:00:00 +0000 UTC}, UpdatedAt:github.Timestamp{0001-01-01 00:00:00 +0000 UTC}, Author:github.User{}, InstallationCommand:"", Metadata:github.PackageMetadata{}, PackageHTMLURL:"", Name:"", URL:""}`
+	want := `github.PackageVersion{ID:0, Version:"", Summary:"", Body:"", BodyHTML:"", Release:github.PackageRelease{}, Manifest:"", HTMLURL:"", TagName:"", TargetCommitish:"", TargetOID:"", Draft:false, Prerelease:false, CreatedAt:github.Timestamp{0001-01-01 00:00:00 +0000 UTC}, UpdatedAt:github.Timestamp{0001-01-01 00:00:00 +0000 UTC}, Author:github.User{}, InstallationCommand:"", PackageHTMLURL:"", Name:"", URL:""}`
 	if got := v.String(); got != want {
 		t.Errorf("PackageVersion.String = %v, want %v", got, want)
 	}
