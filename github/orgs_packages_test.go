@@ -235,14 +235,14 @@ func TestOrganizationsService_ListPackagesVersions(t *testing.T) {
 			  "created_at": `+referenceTimeStr+`,
 			  "updated_at": `+referenceTimeStr+`,
 			  "html_url": "https://github.com/users/octocat/packages/container/hello_docker/45763",
-			  "metadata": {
+			  "metadata": [{
 				"package_type": "container",
 				"container": {
 				  "tags": [
 					"latest"
 				  ]
 				}
-			  }
+			  }]
 			}]`)
 	})
 
@@ -263,10 +263,12 @@ func TestOrganizationsService_ListPackagesVersions(t *testing.T) {
 		CreatedAt:      &Timestamp{referenceTime},
 		UpdatedAt:      &Timestamp{referenceTime},
 		HTMLURL:        String("https://github.com/users/octocat/packages/container/hello_docker/45763"),
-		Metadata: &PackageMetadata{
-			PackageType: String("container"),
-			Container: &PackageContainerMetadata{
-				Tags: []string{"latest"},
+		Metadata: []*PackageMetadata{
+			{
+				PackageType: String("container"),
+				Container: &PackageContainerMetadata{
+					Tags: []string{"latest"},
+				},
 			},
 		},
 	}}
@@ -304,14 +306,14 @@ func TestOrganizationsService_PackageGetVersion(t *testing.T) {
 			  "created_at": `+referenceTimeStr+`,
 			  "updated_at": `+referenceTimeStr+`,
 			  "html_url": "https://github.com/users/octocat/packages/container/hello_docker/45763",
-			  "metadata": {
+			  "metadata": [{
 				"package_type": "container",
 				"container": {
 				  "tags": [
 					"latest"
 				  ]
 				}
-			  }
+			  }]
 			}`)
 	})
 
@@ -329,10 +331,12 @@ func TestOrganizationsService_PackageGetVersion(t *testing.T) {
 		CreatedAt:      &Timestamp{referenceTime},
 		UpdatedAt:      &Timestamp{referenceTime},
 		HTMLURL:        String("https://github.com/users/octocat/packages/container/hello_docker/45763"),
-		Metadata: &PackageMetadata{
-			PackageType: String("container"),
-			Container: &PackageContainerMetadata{
-				Tags: []string{"latest"},
+		Metadata: []*PackageMetadata{
+			{
+				PackageType: String("container"),
+				Container: &PackageContainerMetadata{
+					Tags: []string{"latest"},
+				},
 			},
 		},
 	}
